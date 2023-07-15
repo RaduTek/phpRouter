@@ -63,11 +63,11 @@ The template file is a PHP file where two macros can be inserted:
 To fill the template with content we use the render function:
 
 ```php
-Templater::render($template_path, $content_function, $title)
+Templater::render($template_path, $insert_content, $title)
 ```
 
 -   `$template_path` - path to template file
--   `$content_function` - function that renders content
+-   `$insert_content` - path to PHP content or a content function
 -   `$title` - page title (optional)
 
 ### Templater Examples:
