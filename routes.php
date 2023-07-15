@@ -40,9 +40,10 @@ Router::get('/page1', $page1);
 Router::get('/page1/$variable', $page1);
 Router::get('/page1/$variable/$variable2', $page1);
 
+$page2 = Templater::render('templates/main', 'pages/page2.php', 'Page 2');
 
-Router::get('/page2', './pages/page2');
-Router::get('/page2/$variable', './pages/page2');
+Router::get('/page2', $page2);
+Router::get('/page2/$variable', $page2);
 
 Router::default();
 Router::notfound(function() { echo 'Page not found!'; });
