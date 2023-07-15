@@ -38,7 +38,7 @@ class Router {
             if (strlen($route_part) > 0 && $route_part[0] === '$') {
                 $route_var_name = substr($route_part, 1);
                 $$route_var_name = $request_part;
-                array_push($params, $request_part);
+                $params[$route_var_name] = $request_part;
             } else if ($route_part != $request_part) {
                 return;
             }
